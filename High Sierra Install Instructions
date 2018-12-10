@@ -1,0 +1,18 @@
+> install homebrew: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+> install autotools: https://gist.github.com/justinbellamy/2672db1c78f024f2d4fe
+brew install pkg-config
+brew install gettext
+brew install gmp
+brew install bison
+brew link bison --force
+./autogen.sh && ./configure && make dist
+
+cd src/frontends/android/app/src/main/jni
+git clone git://git.strongswan.org/android-ndk-boringssl.git -b ndk-static openssl
+
+Open src/frontends/android/app/src/main/jni/Application.mk
+Add line:
+NDK_TOOLCHAIN_VERSION := 4.9
+	(reference: https://wiki.strongswan.org/issues/2175)
+ 
+Open src/frontends/android in Android Studio

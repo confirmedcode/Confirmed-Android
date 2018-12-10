@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tt_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@null"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+<!--
+    <fragment
+        android:id="@+id/vpn_state_frag"
+        class="com.trytunnels.android.ui.ttVpnStateFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+-->
+<!--
+    <fragment
+        android:id="@+id/profile_list_frag"
+        class="org.strongswan.android.ui.VpnProfileListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:text="@string/tt_app_name"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="#fdfdfd"
+        android:fontFamily="@font/lato_light"
+        android:fontFeatureSettings="liga 0"
+        android:textSize="@dimen/tt_title_size"
+        android:textStyle="normal"/>
+</RelativeLayout>
+<!--
+
+         android:gravity="center_vertical"
+        android:textColor="@color/tt_title_color"
+        android:textSize="@dimen/tt_title_size"
+        android:textStyle="bold"/>-->
+
+
+
+
+    <fragment
+        android:id="@+id/tt_vpn_state_frag"
+        class="com.trytunnels.android.ui.ttVpnStateFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8" />
+
+    <!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8">
+
+        <ImageView
+            android:id="@+id/btnVpnPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/tt_power_button" />
+
+        <ProgressBar
+            android:id="@+id/progressBarVpnPower"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+-->
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spinnerCountrySelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/tt_spinner_bg"
+        android:theme="@style/MatchSpinnerTheme"/>
+
+</LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        app:itemTextAppearance="@style/NavDrawerTextStyle"
+        app:itemTextColor="@color/blue_checkable"
+        app:itemIconTint="@color/blue_checkable"
+        app:itemBackground="@drawable/white_drawable_checkable"
+        app:headerLayout="@layout/tt_nav_header"
+        app:menu="@menu/tt_main"/>
+
+</android.support.v4.widget.DrawerLayout>

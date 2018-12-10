@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/tt_welcome_activity">
+    <Button
+        android:id="@+id/btn_close_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginTop="10dp"
+        android:text="X"
+        android:textSize="24dp"
+        android:textColor="@color/light_gray" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tt_dots_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/tt_dots_margin_bottom"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"></LinearLayout>
+    <Button
+        android:id="@+id/btn_goto_sign_up"
+        android:layout_width="@dimen/tt_sign_button_width"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/layoutDots"
+        android:layout_centerInParent="true"
+        android:background="@color/confirmed_blue"
+        android:text="@string/tt_welcome_sign_up"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:letterSpacing="0.03"
+        android:fontFamily="@font/lato_light"
+        android:fontFeatureSettings="liga 0"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/white_light_clickable" />
+    <Button
+        android:id="@+id/btn_goto_sign_in"
+        android:layout_width="@dimen/tt_sign_button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btn_goto_sign_up"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bordered_button"
+        android:text="@string/tt_welcome_sign_in"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:letterSpacing="0.03"
+        android:fontFamily="@font/lato_light"
+        android:fontFeatureSettings="liga 0"
+        android:textColor="@color/blue_light_clickable" />
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha=".5"
+        android:layout_above="@id/layoutDots"
+        android:background="@android:color/white" />-->
+    <!--<Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:text="@string/tt_welcome_next"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:text="@string/tt_welcome_skip"
+        android:textColor="@android:color/white" />-->
+</RelativeLayout>

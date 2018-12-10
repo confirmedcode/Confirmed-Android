@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tt_rounded_corners"
+    android:padding="@dimen/widget_margin">
+
+    <ImageView
+        android:id="@+id/btn_widget_power"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/tt_power_button"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/txt_widget_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmed VPN"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/txt_widget_connect_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tt_vpn_state_textview_disconnected"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tt_widget_text_size"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/txt_widget_title"
+        android:layout_toEndOf="@id/btn_widget_power"/>
+
+    <TextView
+        android:id="@+id/txt_widget_speed_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed: Tap to Test"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tt_widget_text_size"
+        android:fontFamily="sans-serif-light"
+        android:layout_toEndOf="@id/btn_widget_power"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/txt_widget_connect_state"/>
+
+
+    <!--<Button
+        android:id="@+id/btn_widget_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tt_power_button"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>-->
+
+    <!--<TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:background="#09C"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />-->
+
+</RelativeLayout>

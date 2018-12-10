@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/super_light_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="left">
+            <Button
+                android:id="@+id/btn_close_explanation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginTop="10dp"
+                android:text="X"
+                android:textSize="24dp"
+                android:textColor="@color/light_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_explanation_ip_address"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/checkmark"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/txt_explanation_ip_address_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toEndOf="@+id/img_explanation_ip_address"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/lato"
+                    android:fontFeatureSettings="liga 0"
+                    android:textColor="@color/dark_gray"
+                    android:text="@string/tt_explanation_ip_address_title_good"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_explanation_ip_address_title"
+                    android:layout_toEndOf="@+id/img_explanation_ip_address"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/lato_light"
+                    android:fontFeatureSettings="liga 0"
+                    android:textColor="@color/dark_gray"
+                    android:text="@string/tt_explanation_ip_address_details"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light_gray"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_explanation_encryption"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/checkmark"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/txt_explanation_encryption_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toEndOf="@+id/img_explanation_encryption"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/lato"
+                    android:fontFeatureSettings="liga 0"
+                    android:textColor="@color/dark_gray"
+                    android:text="@string/tt_explanation_encryption_title_good"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_explanation_encryption_title"
+                    android:layout_toEndOf="@+id/img_explanation_encryption"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/lato_light"
+                    android:fontFeatureSettings="liga 0"
+                    android:textColor="@color/dark_gray"
+                    android:text="@string/tt_explanation_encryption_details"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/view_explanation_setup_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/light_gray"/>
+            <Button
+                android:id="@+id/btn_explanation_setup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="Setup"
+                android:textColor="@color/blue_light_clickable"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left">
+        <Button
+            android:id="@+id/btn_close_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:text="X"
+            android:textSize="24dp"
+            android:textColor="@color/light_gray" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:weightSum="100">
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="Email"/>
+            <EditText
+                android:id="@+id/sign_in_email_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:backgroundTint="@color/confirmed_blue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="Password"/>
+            <EditText
+                android:id="@+id/sign_in_password_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:backgroundTint="@color/confirmed_blue"
+                />
+            <Button
+                android:id="@+id/btn_sign_in_with_cred"
+                android:layout_width="@dimen/tt_sign_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true"
+                android:textAllCaps="false"
+                android:background="@drawable/tt_rounded_corners_button"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textSize="20sp"
+                android:text="@string/tt_welcome_sign_in"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/white_light_clickable" />
+            <Button
+                android:id="@+id/btn_sign_in_forgot_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:background="@null"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textSize="14sp"
+                android:text="@string/tt_sign_in_forgot_password_button"
+                android:textColor="@color/dark_gray_light_clickable" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20" />
+    </LinearLayout>
+</LinearLayout>
+    <Button
+        android:id="@+id/btn_sign_in_help"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false"
+        android:background="@null"
+        android:fontFamily="@font/lato_light"
+        android:fontFeatureSettings="liga 0"
+        android:textSize="14sp"
+        android:text="Help"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/dark_gray_light_clickable" />
+</RelativeLayout>

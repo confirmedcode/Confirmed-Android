@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/menu_import_profile"
+        android:title="@string/profile_import"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/menu_manage_certs"
+        android:title="@string/trusted_certs_title"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/menu_crl_cache"
+        android:title="@string/crl_cache"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/menu_show_log"
+        android:title="@string/show_log"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/menu_show_welcome"
+        android:title="@string/tt_show_welcome"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/menu_show_account"
+        android:title="@string/tt_show_account"
+        app:showAsAction="withText" />-->
+
+    <item
+        android:id="@+id/menu_hamburger"
+        android:icon="@drawable/tt_menu_hamburger_icon_24dp"
+        android:orderInCategory="100"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menu_show_help"
+                android:icon="@drawable/tt_menu_help_icon_24dp"
+                android:title="@string/tt_show_help"
+                app:showAsAction="collapseActionView" />
+            <item
+                android:id="@+id/menu_show_welcome"
+                android:icon="@drawable/tt_menu_info_icon_24dp"
+                android:title="@string/tt_show_welcome"
+                app:showAsAction="collapseActionView" />
+            <item
+                android:id="@+id/menu_speed_test"
+                android:icon="@drawable/tt_speed_test_icon"
+                android:title="@string/tt_show_speed_test"
+                app:showAsAction="collapseActionView" />
+            <item
+                android:id="@+id/menu_vpn_settings"
+                android:icon="@drawable/tt_menu_settings_24dp"
+                android:title="VPN Settings"
+                app:showAsAction="collapseActionView" />
+        </menu>
+    </item>
+
+</menu>

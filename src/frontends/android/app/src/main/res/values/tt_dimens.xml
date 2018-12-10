@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="tt_activity_horizontal_margin">16dp</dimen>
+    <dimen name="tt_activity_vertical_margin">16dp</dimen>
+    <dimen name="tt_fab_margin">16dp</dimen>
+    <dimen name="tt_dots_height">160dp</dimen>
+    <dimen name="tt_dots_margin_bottom">20dp</dimen>
+    <dimen name="tt_img_width_height">150dp</dimen>
+    <dimen name="tt_desc_padding">40dp</dimen>
+    <dimen name="tt_welcome_slide_title">36sp</dimen>
+    <dimen name="tt_welcome_slide_desc">20sp</dimen>
+    <dimen name="tt_welcome_slide_small_desc">14sp</dimen>
+    <dimen name="tt_sign_button_width">200dp</dimen>
+    <dimen name="tt_welcome_icon_size">100dp</dimen>
+    <dimen name="tt_welcome_top_padding">20dp</dimen>
+    <dimen name="tt_welcome_title_top_padding">40dp</dimen>
+    <dimen name="tt_welcome_desc_top_padding">40dp</dimen>
+    <dimen name="tt_sign_up_main_text_size">16sp</dimen>
+    <dimen name="tt_sign_up_secondary_text_size">14sp</dimen>
+    <dimen name="tt_welcome_first_page_no_icon_margin">140dp</dimen>
+    <dimen name="tt_welcome_last_page_desc">24sp</dimen>
+    <dimen name="tt_title_size">20sp</dimen>
+    <dimen name="tt_widget_text_size">20sp</dimen>
+    <dimen name="tt_power_button_size">190dp</dimen>
+    <dimen name="tt_monthly_annual_width">80dp</dimen>
+    <dimen name="tt_monthly_annual_underline_width">60dp</dimen>
+    <dimen name="tt_menu_item_size">60dp</dimen>
+    <dimen name="tt_menu_item_text_size">18sp</dimen>
+</resources>

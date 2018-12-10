@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="180dp"
+    android:paddingTop="@dimen/tt_welcome_top_padding"
+    android:weightSum="100">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="80"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/tt_welcome_icon_size"
+            android:layout_height="@dimen/tt_welcome_icon_size"
+            android:src="@drawable/safe_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tt_welcome_title_top_padding"
+            android:fontFamily="@font/lato_bold"
+            android:fontFeatureSettings="liga 0"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:text="@string/tt_welcome_slide_3_title"
+            android:textColor="@color/confirmed_blue"
+            android:textSize="@dimen/tt_welcome_slide_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tt_welcome_desc_top_padding"
+            android:gravity="center_horizontal"
+            android:text="@string/tt_welcome_slide_3_desc"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/lato_light"
+            android:fontFeatureSettings="liga 0"
+            android:textSize="@dimen/tt_welcome_slide_desc" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10" />
+
+</LinearLayout>

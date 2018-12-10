@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_center_anchor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+
+    <ImageView
+        android:id="@+id/btnVpnPower"
+        android:layout_width="@dimen/tt_power_button_size"
+        android:layout_height="@dimen/tt_power_button_size"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-40dp"
+        android:layout_above="@+id/view_center_anchor"
+        android:src="@drawable/tt_power_button_animation_circle" />
+
+    <ProgressBar
+        android:id="@+id/progressBarVpnPower"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvVpnState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/btnVpnPower"
+        android:layout_marginTop="56dp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/lato_bold"
+        android:fontFeatureSettings="liga 0"
+        android:text="@string/tt_vpn_state_textview_disconnected"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_vpn_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tvVpnState"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="false"
+        android:background="@null"
+        android:fontFamily="@font/lato_light"
+        android:fontFeatureSettings="liga 0"
+        android:text="ⓘ  What does this mean?"
+        android:textColor="@color/white_light_clickable"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_speed_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/lightning_icon"
+            android:paddingBottom="5dp"/>
+        <TextView
+            android:id="@+id/tvSpeedTestResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_light"
+            android:fontFeatureSettings="liga 0"
+            android:text="...Mbps"
+            android:paddingBottom="10dp"
+            android:textColor="#ffffff"
+            android:textSize="24sp"/>
+    </LinearLayout>
+</RelativeLayout>

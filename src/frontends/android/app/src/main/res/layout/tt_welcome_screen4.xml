@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tt_bg"
+    android:orientation="horizontal"
+    android:paddingBottom="60dp"
+    android:paddingTop="50dp"
+    android:weightSum="100">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="15" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="70"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tt_welcome_slide_4_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tt_welcome_slide_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tt_welcome_slide_4_desc"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tt_welcome_slide_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tt_welcome_slide_4_desc_2"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tt_welcome_slide_desc" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="15" />
+
+</LinearLayout>

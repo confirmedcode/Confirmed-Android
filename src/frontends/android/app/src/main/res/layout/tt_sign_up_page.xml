@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start">
+        <Button
+            android:id="@+id/btn_close_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:text="X"
+            android:textSize="24dp"
+            android:textColor="@color/light_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_monthly_choice"
+            android:layout_width="@dimen/tt_monthly_annual_width"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textAllCaps="false"
+            android:text="Monthly"
+            android:fontFamily="@font/lato_light"
+            android:fontFeatureSettings="liga 0"
+            android:textColor="@color/confirmed_blue"/>
+            <View
+                android:id="@+id/view_sign_up_selection_underline"
+                android:layout_width="@dimen/tt_monthly_annual_underline_width"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-10dp"
+                android:background="@color/confirmed_blue"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/light_gray"/>
+        <Button
+            android:id="@+id/btn_annual_choice"
+            android:layout_width="@dimen/tt_monthly_annual_width"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textAllCaps="false"
+            android:text="Annual"
+            android:fontFamily="@font/lato_light"
+            android:fontFeatureSettings="liga 0"
+            android:textColor="@color/dark_gray"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100">
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <!--<TextView
+                android:id="@+id/txt_sign_up_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/tt_sign_up_header"
+                android:lines="1"
+                android:textColor="@color/confirmed_blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="left"
+                android:text="@string/tt_sign_up_desc"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textSize="@dimen/tt_sign_up_main_text_size"/>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/tt_sign_up_all_devices_title"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/lato_light"
+                    android:fontFeatureSettings="liga 0"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="@dimen/tt_sign_up_main_text_size"
+                    />
+                <RadioButton android:id="@+id/radio_all_devices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/confirmed_blue"
+                    android:text="@string/tt_sign_up_all_devices_desc"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/lato_light"
+                    android:fontFeatureSettings="liga 0"
+                    android:textSize="@dimen/tt_sign_up_secondary_text_size"
+                    android:onClick="onRadioButtonClicked"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/tt_sign_up_android_only_title"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/lato_light"
+                    android:fontFeatureSettings="liga 0"
+                    android:textSize="@dimen/tt_sign_up_main_text_size"
+                    />
+                <RadioButton android:id="@+id/radio_android_only"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/confirmed_blue"
+                    android:textColor="@color/light_gray"
+                    android:text="@string/tt_sign_up_android_only_desc"
+                    android:fontFamily="@font/lato_light"
+                    android:fontFeatureSettings="liga 0"
+                    android:textSize="@dimen/tt_sign_up_secondary_text_size"
+                    android:onClick="onRadioButtonClicked"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_make_purchase"
+                android:layout_width="@dimen/tt_sign_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tt_welcome_title_top_padding"
+                android:background="@drawable/tt_rounded_corners_button"
+                android:textAllCaps="false"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textSize="20sp"
+                android:text="@string/tt_sign_up_make_purchase_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/white_light_clickable" />
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom|center"
+                android:text="@string/tt_sign_up_fine_print"
+                android:textSize="8sp"
+                android:textColor="@color/light_gray"/>-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
+    </LinearLayout>
+
+</LinearLayout>

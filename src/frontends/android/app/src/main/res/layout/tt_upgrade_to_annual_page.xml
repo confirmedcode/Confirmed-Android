@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <Button
+            android:id="@+id/btn_close_upgrade_annual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:text="X"
+            android:textSize="24dp"
+            android:textColor="@color/light_gray" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:weightSum="100">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/tt_welcome_icon_size"
+                android:layout_height="@dimen/tt_welcome_icon_size"
+                android:src="@drawable/tunnel_icon_transparent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/lato_bold"
+                android:fontFeatureSettings="liga 0"
+                android:text="Two Months Free"
+                android:textColor="@color/confirmed_blue"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="@string/tt_upgrader_annual_pitch"
+                android:textColor="@color/dark_gray"
+                android:textSize="20sp"/>
+
+
+
+            <Button
+                android:id="@+id/btn_make_upgrade_annual"
+                android:layout_width="@dimen/tt_sign_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/tt_rounded_corners_button"
+                android:textAllCaps="false"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textSize="20sp"
+                android:text="Switch to Annual"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/white_light_clickable" />
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom|center"
+                android:text="@string/tt_sign_up_fine_print"
+                android:textSize="8sp"
+                android:textColor="@color/light_gray"/>-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
+    </LinearLayout>
+
+</RelativeLayout>

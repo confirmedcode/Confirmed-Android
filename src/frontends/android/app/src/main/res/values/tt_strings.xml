@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
+
+    <!-- Application -->
+    <string name="tt_app_name">Confirmed VPN</string>
+    <string name="tt_main_activity_name">Confirmed VPN</string>
+
+    <string name="tt_show_welcome">Benefits</string>
+    <string name="tt_show_account">Account</string>
+    <string name="tt_show_help">Help</string>
+    <string name="tt_show_speed_test">Speed Test</string>
+
+    <string name="tt_welcome_next">NEXT</string>
+    <string name="tt_welcome_skip">SKIP</string>
+    <string name="tt_welcome_start">GOT IT</string>
+    <string name="tt_welcome_sign_up">Sign Up</string>
+    <string name="tt_welcome_sign_in">Sign In</string>
+    <string name="tt_welcome_slide_1_title">Confirmed VPN</string>
+    <string name="tt_welcome_slide_1_desc">Swipe to learn why Confirmed is the only VPN you can trust.</string>
+    <string name="tt_welcome_slide_2_title">Protect Your Data</string>
+    <string name="tt_welcome_slide_2_desc">Confirmed uses bank-level encryption to stop ISPs, hackers, and snoopers from accessing your personal data.</string>
+    <string name="tt_welcome_slide_2_notify_button">Notify me</string>
+    <string name="tt_welcome_slide_2_notify_desc">Keep me informed about Confirmed updates</string>
+    <string name="tt_welcome_slide_3_title">Safe</string>
+    <string name="tt_welcome_slide_3_desc">Confirmed VPN is different: our Privacy Policy explicitly and legally prohibits us from logging any personal data or information.</string>
+    <string name="tt_welcome_slide_4_title">Anonymous</string>
+    <string name="tt_welcome_slide_4_desc">Without a VPN, it is extremely easy to track your location and usage patterns.</string>
+    <string name="tt_welcome_slide_4_desc_2">Location Changed\nIP Address Hidden\nEncrypted Browsing</string>
+    <string name="tt_welcome_slide_5_title">Get Started</string>
+    <string name="tt_welcome_slide_5_desc">Try the most trusted way to browse securely and privately.</string>
+    <string name="tt_welcome_slide_5_desc_2">Help support us in keeping you and the Internet safe by subscribing today.</string>
+    <string name="tt_welcome_slide_5_free_trial_button">Start Free Trial</string>
+    <string name="tt_title_activity_welcome">Home Screen</string>
+    <string name="tt_sign_up_desc">Secure your data now with Confirmed, the openly operated VPN audited by countless security professionals.</string>
+    <string name="tt_sign_up_all_devices_title">All Devices</string>
+    <string name="tt_sign_up_all_devices_desc">Up to five devices on any platform for $9.99 per month</string>
+    <string name="tt_sign_up_all_devices_desc_var">Up to five devices on any platform for %1$s per month</string>
+    <string name="tt_sign_up_all_devices_annual_desc_var">Up to five devices on any platform for %1$s per year (two months free)</string>
+    <string name="tt_sign_up_android_only_title">Android Only</string>
+    <string name="tt_sign_up_android_only_desc">Up to three of your Android devices for only $4.99 per month</string>
+    <string name="tt_sign_up_android_only_desc_var">Up to three of your Android devices for only %1$s per month</string>
+    <string name="tt_sign_up_android_only_annual_desc_var">Up to three of your Android devices for only %1$s per year (two months free)</string>
+    <string name="tt_sign_up_make_purchase_button">Start Free Trial</string>
+    <string name="tt_sign_up_make_purchase_button_var">First Month %1$s</string>
+    <string name="tt_sign_up_header">Start Now, Only $0.99</string>
+    <string name="tt_sign_up_header_var">Start Now, Only %1$s</string>
+    <string name="tt_sign_up_fine_print">Confirmed VPN is a service to gain unlimited data for our VPN service. Confirmed subscriptions have a free one week trial, after which you will be charged to your credit card through your Google Play account. Price may vary by location. Your subscription will automatically renew unless canceled at least 24 hours before the end of the current period. Manage Confirmed in Account Settings after the optional upgrade.</string>
+    <string name="tt_sign_in_forgot_password_button">Forgot Password</string>
+    <string name="tt_add_email_sign_in">Create Sign In</string>
+    <string name="tt_add_email_desc">Please enter your e-mail and password to sign in on other devices.</string>
+    <string name="tt_upgrader_annual_pitch">Sign up for an annual plan and get two months free.</string>
+
+    <string name="tt_vpn_settings_explainer_text">Some services don\'t work well with a VPN or specifically block a VPN. Apps checked here will not send their data through the VPN.</string>
+    <string name="tt_vpn_settings_apply_button">Save</string>
+
+    <string name="tt_paid_sub_key">androidtunnels</string>
+    <string name="tt_paid_unlimited_sub_key">unlimitedtunnels</string>
+    <string name="tt_paid_sub_key_annual">androidtunnelsannual</string>
+    <string name="tt_paid_unlimited_sub_key_annual">unlimitedtunnelsannual</string>
+    <string name="tt_paid_sub_info_key">paid_sub_info</string>
+    <string name="tt_receipt_start_date">receipt_start_date</string>
+    <string name="tt_showed_annual_popup">showed_annual_popup</string>
+    <string name="tt_exclude_list">application_exclude_list</string>
+
+    <string name="tt_email_store_key">ConfirmedEmailLogin</string>
+    <string name="tt_password_store_key">ConfirmedPasswordLogin</string>
+
+    <string name="tt_vpn_state_textview_disconnected">Disconnected</string>
+    <string name="tt_vpn_state_textview_connecting">Connecting</string>
+    <string name="tt_vpn_state_textview_connected">Protected</string>
+    <string name="tt_vpn_state_textview_disconnecting">Disconnecting</string>
+
+    <string name="tt_couldnt_get_plan">Couldn\'t load plan</string>
+    <string name="tt_android_only_plan">android-monthly</string>
+    <string name="tt_android_only_plan_annual">android-annual</string>
+    <string name="tt_all_device_plan_title">All Devices</string>
+    <string name="tt_all_device_plan_desc">Unlimited data for Mac, Windows, iOS, and Android</string>
+    <string name="tt_android_only_title">Android Only</string>
+    <string name="tt_android_only_desc">Only Android Devices</string>
+
+    <string name="tt_correct_start_key">SuccessfulVPNStart</string>
+
+    <string name="tt_explanation_ip_address_title_good">IP Address Hidden</string>
+    <string name="tt_explanation_ip_address_title_bad">IP Address Visible</string>
+    <string name="tt_explanation_ip_address_details">Your IP address is a uniquely identifiable number to track your activities. Confirmed masks this number to let you browse anonymously.</string>
+    <string name="tt_explanation_encryption_title_good">Encrypted Traffic</string>
+    <string name="tt_explanation_encryption_title_bad">Some Unencrypted Traffic</string>
+    <string name="tt_explanation_encryption_details">Confirmed uses 256-bit encryption to prevent hackers, snoopers, and ISPs from viewing your data or browsing history.</string>
+
+    <string name="tt_postboard_welcome">Let\'s set up Confirmed to get the best possible experience.</string>
+    <string name="tt_postboard_secured">Your traffic is now encrypted with bank-level 256-bit encryption and your uniquely identifiable IP address is hidden to protect your privacy.</string>
+    <string name="tt_postboard_secure_button">Get Secure</string>
+    <string name="tt_postboard_secured_button">Continue</string>
+
+    <string name="tt_shared_pref_file">com.confirmed.tunnels.shared_prefs</string>
+</resources>

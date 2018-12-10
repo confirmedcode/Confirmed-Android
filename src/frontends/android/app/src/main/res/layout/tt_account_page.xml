@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/super_light_gray"
+    android:orientation="vertical">
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:background="@null">
+        <Button
+            android:id="@+id/btn_close_account_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:text="X"
+            android:textSize="24dp"
+            android:textColor="@color/light_gray" />
+    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white">
+            <TextView
+                android:id="@+id/txt_account_email_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_bold"
+                android:fontFeatureSettings="liga 0"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="Email"/>
+            <TextView
+                android:id="@+id/txt_account_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:autoSizeTextType="uniform"
+                android:lines="1"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textSize="16sp"
+                android:textColor="@color/dark_gray"
+                android:text="Email goes here"/>
+            <Button
+                android:id="@+id/btn_account_add_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="Add Email"
+                android:textColor="@color/blue_light_clickable" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_gray"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_bold"
+                android:fontFeatureSettings="liga 0"
+                android:text="Plan"/>
+        <TextView
+            android:id="@+id/txt_account_plan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/lato_light"
+            android:fontFeatureSettings="liga 0"
+            android:textColor="@color/dark_gray"
+            android:text="Couldn't load plan"/>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="70dp">
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/confirmed_blue"></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="100"
+                android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_go_unlimited"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:textColor="@color/blue_light_clickable"
+                android:textSize="16sp"
+                android:textAlignment="gravity"
+                android:fontFamily="@font/lato"
+                android:fontFeatureSettings="liga 0"
+                android:text="Protect All Devices"/>
+            <TextView
+                android:id="@+id/txt_account_plan_desc"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="70"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="viewEnd"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textColor="@color/light_gray"
+                android:text="Couldn't load plan"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_upgrade_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:fontFamily="@font/lato_bold"
+        android:fontFeatureSettings="liga 0"
+        android:text="Get 2 Months Free!"
+        android:textColor="@color/blue_light_clickable"/>
+    <RelativeLayout
+        android:id="@+id/layout_account_sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/white">
+        <Button
+            android:id="@+id/btn_account_sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/lato"
+            android:fontFeatureSettings="liga 0"
+            android:text="Sign Out Of Account"
+            android:textColor="@color/light_gray_light_clickable" />
+    </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_account_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/lato_light"
+        android:fontFeatureSettings="liga 0"
+        android:textColor="@color/dark_gray"
+        android:text="1.0.0"/>
+</RelativeLayout>

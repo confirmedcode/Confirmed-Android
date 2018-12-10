@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item android:drawable="@color/white"/>
+
+    <!-- Logo at the center of the screen -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/tunnel_icon_transparent_small"/>
+    </item>
+</layer-list>

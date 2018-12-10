@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:weightSum="100">
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="@string/tt_add_email_desc"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="Email"/>
+            <EditText
+                android:id="@+id/add_email_email_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:backgroundTint="@color/confirmed_blue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="Password"/>
+            <EditText
+                android:id="@+id/add_email_password_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="14sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:backgroundTint="@color/confirmed_blue"
+                />
+           <!-- <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:text="Password Confirm"/>
+            <EditText
+                android:id="@+id/add_email_password_confirm_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="12sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:backgroundTint="@color/confirmed_blue"
+                />-->
+            <Button
+                android:id="@+id/btn_create_sign_in"
+                android:layout_width="@dimen/tt_sign_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerInParent="true"
+                android:background="@color/confirmed_blue"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textAllCaps="false"
+                android:text="@string/tt_add_email_sign_in"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/white_light_clickable" />
+            <Button
+                android:id="@+id/btn_close_add_email"
+                android:layout_width="@dimen/tt_sign_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:fontFamily="@font/lato_light"
+                android:fontFeatureSettings="liga 0"
+                android:textAllCaps="false"
+                android:text="Later"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/blue_light_clickable" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20" />
+    </LinearLayout>
+
+</LinearLayout>

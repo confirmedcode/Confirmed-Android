@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- the theme applied to the application or activity -->
+    <style name="ttApplicationTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Support library compatibility -->
+        <!--<item name="actionBarStyle">@style/Theme.AppCompat.NoActionBar</item>-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowActionBarOverlay">true</item>
+        <item name="actionOverflowMenuStyle">@style/ThemePopupMenu</item>
+        <item name="actionBarPopupTheme">@style/ThemeActionBarPopup</item>-->
+        <!--<item name="android:windowDisablePreview">true</item>-->
+        <item name="android:listPreferredItemHeightSmall">@dimen/tt_menu_item_size</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+    <style name="NavDrawerTextStyle" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/tt_menu_item_text_size</item>
+        <item name="android:fontFamily">@font/lato_light</item>
+    </style>
+    <style name="ttAccountTheme" parent="ApplicationTheme.Base">
+        <item name="actionBarTheme">@style/MyApp.ActionBarTheme</item>
+        <item name="actionBarStyle">@style/MyApp.ActionBarStyle</item>
+        <!--<item name="windowActionBarOverlay">true</item>
+        <item name="actionOverflowMenuStyle">@style/ThemePopupMenu</item>
+        <item name="actionBarPopupTheme">@style/ThemeActionBarPopup</item>-->
+    </style>
+    <style name="ThemeActionBar"
+        parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@null</item>
+        <!-- Support library compatibility -->
+        <item name="background">@null</item>
+    </style>
+    <style name="ThemePopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">#fff</item>
+    </style>
+    <style name="ThemeActionBarPopup" parent="Widget.AppCompat.ListPopupWindow">
+        <item name="android:textColor">@color/tt_bg_color</item>
+    </style>
+
+    <style name="MatchSpinnerTheme" parent="ApplicationTheme.Base">
+        <item name="android:dropDownListViewStyle">@style/MatchSpinnerStyle</item>
+    </style>
+    <style name="MatchSpinnerStyle" parent="android:style/Widget.ListView.DropDown">
+        <item name="android:divider">#BBB</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+    <style name="MyApp.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- THIS is where you can color the arrow! -->
+        <item name="colorControlNormal">@color/dark_gray</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="MyApp.ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="elevation">0dp</item>
+        <!-- style for actionBar title -->
+        <item name="titleTextStyle">@style/myTheme.ActionBar.Text</item>
+        <!-- style for actionBar subtitle -->
+        <!--<item name="subtitleTextStyle">@style/ActionBarSubtitleText</item>-->
+
+        <!--
+        the actionBarTheme doesn't use the colorControlNormal attribute
+        <item name="colorControlNormal">@color/my_awesome_color</item>
+         -->
+    </style>
+
+    <style name="myTheme.ActionBar.Text" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+</resources>

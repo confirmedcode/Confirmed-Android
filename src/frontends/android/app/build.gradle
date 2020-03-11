@@ -5,14 +5,14 @@ android {
         release {
         }
     }
-    compileSdkVersion 26
+    compileSdkVersion 28
     buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.confirmed.tunnels"
         minSdkVersion 21
-        targetSdkVersion 26
-        versionCode 56
-        versionName "1.2.7"
+        targetSdkVersion 28
+        versionCode 58
+        versionName "1.2.9"
     }
     sourceSets.main {
         jni.srcDirs = [] // disables the default ndk-build call (with on-the-fly Android.mk files)

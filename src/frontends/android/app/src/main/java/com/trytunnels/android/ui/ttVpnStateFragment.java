@@ -692,15 +692,15 @@ public class ttVpnStateFragment extends Fragment implements VpnStateListener {
             throw new Exception("Invalid json");
         }
 
-        if(ConfirmedConstants.getVersionNumber() == 1)
-        {
-            String decodedB64 = new String(Base64.decode(b64.getBytes(), Base64.DEFAULT));
-            JSONObject certJson = new JSONObject(decodedB64);
-            Log.d(TAG, "certJson: " + certJson.toString());
-            ((MainActivity) getActivity()).ttCreateVpnProfile(certJson);
-        }
-        else
-        {
+//        if(ConfirmedConstants.getVersionNumber() == 1)
+//        {
+//            String decodedB64 = new String(Base64.decode(b64.getBytes(), Base64.DEFAULT));
+//            JSONObject certJson = new JSONObject(decodedB64);
+//            Log.d(TAG, "certJson: " + certJson.toString());
+//            ((MainActivity) getActivity()).ttCreateVpnProfile(certJson);
+//        }
+//        else
+//        {
             String id = jsonObj.getString("id");
 
             if (b64.equals("")) {
@@ -709,7 +709,7 @@ public class ttVpnStateFragment extends Fragment implements VpnStateListener {
 
             Log.d(TAG, "v2 cert");
             ((MainActivity) getActivity()).ttCreateVpnProfile(id, b64);
-        }
+//        }
     }
 
     private void hideErrorDialog() {

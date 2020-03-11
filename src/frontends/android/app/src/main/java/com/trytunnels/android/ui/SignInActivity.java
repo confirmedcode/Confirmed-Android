@@ -94,7 +94,7 @@ public class SignInActivity extends AppCompatActivity {
         btnForgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browswerIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.confirmedvpn.com/forgotPassword"));
+                Intent browswerIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://confirmedvpn.com/forgot-password"));
                 startActivity(browswerIntent);
             }
         });
@@ -163,28 +163,28 @@ public class SignInActivity extends AppCompatActivity {
                     signedIn = true;
                 }
                 // check other two version (switch to do/while loop if ever increases)
-                else
-                {
-                    ConfirmedConstants.incrementVersion();
-
-                    ApiUtil.getInstance().signInSync(txtEmail.getText().toString(), txtPassword.getText().toString());
-
-                    if(ApiUtil.getInstance().checkSignedIn())
-                    {
-                        signedIn = true;
-                    }
-                    else
-                    {
-                        ConfirmedConstants.incrementVersion();
-
-                        ApiUtil.getInstance().signInSync(txtEmail.getText().toString(), txtPassword.getText().toString());
-
-                        if(ApiUtil.getInstance().checkSignedIn())
-                        {
-                            signedIn = true;
-                        }
-                    }
-                }
+//                else
+//                {
+//                    ConfirmedConstants.incrementVersion();
+//
+//                    ApiUtil.getInstance().signInSync(txtEmail.getText().toString(), txtPassword.getText().toString());
+//
+//                    if(ApiUtil.getInstance().checkSignedIn())
+//                    {
+//                        signedIn = true;
+//                    }
+//                    else
+//                    {
+//                        ConfirmedConstants.incrementVersion();
+//
+//                        ApiUtil.getInstance().signInSync(txtEmail.getText().toString(), txtPassword.getText().toString());
+//
+//                        if(ApiUtil.getInstance().checkSignedIn())
+//                        {
+//                            signedIn = true;
+//                        }
+//                    }
+//                }
 
                 if(signedIn)
                 {

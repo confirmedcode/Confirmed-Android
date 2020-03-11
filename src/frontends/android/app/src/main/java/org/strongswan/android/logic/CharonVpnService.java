@@ -19,6 +19,7 @@ package org.strongswan.android.logic;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -27,6 +28,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.VpnService;
 import android.os.Build;
 import android.os.Bundle;
@@ -167,6 +169,11 @@ public class CharonVpnService extends VpnService implements Runnable, VpnStateSe
 	@Override
 	public void onCreate()
 	{
+	    super.onCreate();
+	    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+	 		startMyOwnForeground();
+	    else
+	    	startForeground(1, new Notification());
 		mLogFile = getFilesDir().getAbsolutePath() + File.separator + LOG_FILE;
 		mAppDir = getFilesDir().getAbsolutePath();
 
@@ -177,6 +184,29 @@ public class CharonVpnService extends VpnService implements Runnable, VpnStateSe
 		/* the thread is started when the service is bound */
 		bindService(new Intent(this, VpnStateService.class),
 					mServiceConnection, Service.BIND_AUTO_CREATE);
+	}
+
+	private void startMyOwnForeground(){
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+			String NOTIFICATION_CHANNEL_ID = "com.confirmed.tunnels";
+			String channelName = "CVPN Background Service";
+			NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.IMPORTANCE_NONE);
+			chan.setLightColor(Color.BLUE);
+			chan.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+			NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+			assert manager != null;
+			manager.createNotificationChannel(chan);
+
+			NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
+			Notification notification = notificationBuilder.setOngoing(true)
+								   .setSmallIcon(R.drawable.ic_launcher)
+								   .setContentTitle("App is running in background")
+								   .setPriority(NotificationManager.IMPORTANCE_MIN)
+								   .setCategory(Notification.CATEGORY_SERVICE)
+								   .build();
+			startForeground(2, notification);
+			//startForeground(VPN_STATE_NOTIFICATION_ID, buildNotification(false));
+		}
 	}
 
 	@Override
@@ -322,7 +352,8 @@ public class CharonVpnService extends VpnService implements Runnable, VpnStateSe
 	private void addNotification()
 	{
 		mShowNotification = true;
-		startForeground(VPN_STATE_NOTIFICATION_ID, buildNotification(false));
+		//startForeground(VPN_STATE_NOTIFICATION_ID, buildNotification(false));
+		startMyOwnForeground();
 	}
 
 	/**
@@ -349,7 +380,8 @@ public class CharonVpnService extends VpnService implements Runnable, VpnStateSe
 		{
 			name = profile.getName();
 		}
-		android.support.v4.app.NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+		//android.support.v4.app.NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+		android.support.v4.app.NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "com.confirmed.tunnels")
 				.setSmallIcon(R.drawable.ic_notification)
 				.setCategory(NotificationCompat.CATEGORY_SERVICE)
 				.setVisibility(publicVersion ? NotificationCompat.VISIBILITY_PUBLIC

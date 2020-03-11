@@ -785,6 +785,7 @@ public class MainActivity extends AppCompatActivity implements OnVpnProfileSelec
     }
 
     protected void ttCreateVpnProfile(String id, String encodedP12) throws Exception {
+        Log.d(TAG, "creating VPN Profile with id: " + id);
         String closetRegion = getClosestRegion();
         skipNextCountryChange = true;
         setCurrentCountry(closetRegion);
@@ -1090,10 +1091,12 @@ public class MainActivity extends AppCompatActivity implements OnVpnProfileSelec
                 }
                 break;
             case INSTALL_PKCS12:
+                Log.e(TAG, "pkcs12 result: " + resultCode);
                 if (resultCode == Activity.RESULT_OK && mVpnProfile != null) {
                     String userCertAlias = mVpnProfile.getUserCertificateAlias();
                     ttKeychainHelper ttKeychainHelper = new ttKeychainHelper();
-                    KeyChain.choosePrivateKeyAlias(this, ttKeychainHelper, new String[]{"RSA"}, null, null, -1, userCertAlias);
+                    //KeyChain.choosePrivateKeyAlias(this, ttKeychainHelper, new String[]{"RSA"}, null, null, -1, userCertAlias);
+                    KeyChain.choosePrivateKeyAlias(this, ttKeychainHelper, null, null, null, -1, userCertAlias);
                 }
                 else
                 {

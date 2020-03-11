@@ -145,17 +145,18 @@ public class ApiUtil {
 
         try {
             int startVersion = ConfirmedConstants.getVersionNumber();
-            do {
-                response = signInSync(email, password);
-                if(response.code() == 200)
-                {
-                    return true;
-                }
-                else
-                {
-                    ConfirmedConstants.incrementVersion();
-                }
-            } while(ConfirmedConstants.getVersionNumber() != startVersion);
+            response = signInSync(email, password);
+            if(response.code() == 200)
+            {
+                return true;
+            }
+//            do {
+//
+//                else
+//                {
+//                    ConfirmedConstants.incrementVersion();
+//                }
+//            } while(ConfirmedConstants.getVersionNumber() != startVersion);
 
             return false;
         }
@@ -175,6 +176,8 @@ public class ApiUtil {
                 .readTimeout(30, TimeUnit.SECONDS)
                 .cookieJar(cookieJar)
                 .build();
+
+        Log.e(TAG, receipt);
 
         signIn(receipt, new Callback() {
             @Override
@@ -332,19 +335,19 @@ public class ApiUtil {
 
         HttpUrl queryUrl;
 
-        if(ConfirmedConstants.getVersionNumber() < 3)
-        {
+//        if(ConfirmedConstants.getVersionNumber() < 3)
+//        {
+//            queryUrl = HttpUrl.parse(url).newBuilder()
+//                    .addQueryParameter("platform","android")
+//                    .addQueryParameter("source", "both")
+//                    .build();
+//        }
+//        else
+//        {
             queryUrl = HttpUrl.parse(url).newBuilder()
                     .addQueryParameter("platform","android")
-                    .addQueryParameter("source", "both")
                     .build();
-        }
-        else
-        {
-            queryUrl = HttpUrl.parse(url).newBuilder()
-                    .addQueryParameter("platform","android")
-                    .build();
-        }
+ //       }
 
         Request request = new Request.Builder()
                 .url(queryUrl)
@@ -366,19 +369,19 @@ public class ApiUtil {
                 .build();
 
         HttpUrl queryUrl;
-        if(ConfirmedConstants.getVersionNumber() < 3)
-        {
+//        if(ConfirmedConstants.getVersionNumber() < 3)
+//        {
+//            queryUrl = HttpUrl.parse(url).newBuilder()
+//                    .addQueryParameter("platform","android")
+//                    .addQueryParameter("source", "both")
+//                    .build();
+//        }
+//        else
+//        {
             queryUrl = HttpUrl.parse(url).newBuilder()
                     .addQueryParameter("platform","android")
-                    .addQueryParameter("source", "both")
                     .build();
-        }
-        else
-        {
-            queryUrl = HttpUrl.parse(url).newBuilder()
-                    .addQueryParameter("platform","android")
-                    .build();
-        }
+//        }
 
         Request request = new Request.Builder()
                 .url(queryUrl)
@@ -488,20 +491,20 @@ public class ApiUtil {
 
         RequestBody formBody;
 
-        if(ConfirmedConstants.getVersionNumber() == 1)
-        {
-            formBody = new FormBody.Builder()
-                    .add("platform", "android")
-                    .add("receipt", receipt)
-                    .build();
-        }
-        else
-        {
+//        if(ConfirmedConstants.getVersionNumber() == 1)
+//        {
+//            formBody = new FormBody.Builder()
+//                    .add("platform", "android")
+//                    .add("receipt", receipt)
+//                    .build();
+//        }
+//        else
+//        {
             formBody = new FormBody.Builder()
                     .add("authtype", "android")
                     .add("authreceipt", receipt)
                     .build();
-        }
+//        }
 
         Request request = new Request.Builder()
                 .url(url)
